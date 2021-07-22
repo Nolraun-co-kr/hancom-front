@@ -1,7 +1,7 @@
 import React from 'react';
-import WrapperLayout from '@/components/WrapperLayout';
+import WrapperLayout from '../../components/WrapperLayout';
 import UseCaseList from '../../containers/usecase/UseCaseList';
-import Visual from '@/components/common/Visual';
+import Visual from '../../components/common/Visual';
 
 export default function Usecase() {
   return (

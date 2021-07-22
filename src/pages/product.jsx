@@ -1,11 +1,11 @@
 import React from 'react';
-import WrapperLayout from '@/components/WrapperLayout';
-import Visual from '@/components/common/Visual';
-import AuthInfo from '@/components/productInfo/AuthInfo';
-import AllInOne from '@/components/productInfo/AllInOne';
-import Multiple from '@/components/productInfo/Multiple';
-import Secure from '@/components/productInfo/Secure';
-import FootLink from '@/components/common/FootLink';
+import WrapperLayout from '../components/WrapperLayout';
+import Visual from '../components/common/Visual';
+import AuthInfo from '../components/productInfo/AuthInfo';
+import AllInOne from '../components/productInfo/AllInOne';
+import Multiple from '../components/productInfo/Multiple';
+import Secure from '../components/productInfo/Secure';
+import FootLink from '../components/common/FootLink';
 
 /*
  * 다양한 한컴OK싸인 기능 내용

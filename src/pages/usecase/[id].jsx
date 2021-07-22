@@ -1,6 +1,6 @@
 import React from 'react';
-import WrapperLayout from '@/components/WrapperLayout';
-import FootLink from '@/components/common/FootLink';
+import WrapperLayout from '../../components/WrapperLayout';
+import FootLink from '../../components/common/FootLink';
 import UseCaseInfo from '../../containers/usecase/UseCaseInfo';
 
 export default function UseCaseDetail() {

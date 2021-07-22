@@ -1,8 +1,8 @@
 import React, { useCallback, useState } from 'react';
-import WrapperLayout from '@/components/WrapperLayout';
-import FootLink from '@/components/common/FootLink';
+import WrapperLayout from '../components/WrapperLayout';
+import FootLink from '../components/common/FootLink';
 import Faq from '../containers/faq';
-import Visual from '@/components/common/Visual';
+import Visual from '../components/common/Visual';
 
 export default function Price() {
   const [type, setType] = useState('month');

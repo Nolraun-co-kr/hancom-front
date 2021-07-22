@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
-import MobileGnb from '@/components/MobileGnb';
+import MobileGnb from '../components/MobileGnb';
 import styled from 'styled-components';
 
 export default function Header() {

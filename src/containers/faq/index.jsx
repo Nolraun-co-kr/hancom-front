@@ -1,5 +1,5 @@
 import React from 'react';
-import FaqItem from '@/components/faq/faqItem';
+import FaqItem from '../../components/faq/faqItem';
 
 export default function Faq() {
   return (

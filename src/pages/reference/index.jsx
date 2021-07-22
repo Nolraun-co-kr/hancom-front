@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import WrapperLayout from '@/components/WrapperLayout';
+import WrapperLayout from '../../components/WrapperLayout';
 import ReferenceList from '../../containers/reference/ReferenceList';
 import { useRouter } from 'next/router';
 

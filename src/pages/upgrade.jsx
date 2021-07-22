@@ -1,6 +1,6 @@
 import React from 'react';
-import WrapperLayout from '@/components/WrapperLayout';
-import EnterPriceTop from '@/components/enterprise/EnterPriceTop';
+import WrapperLayout from '../components/WrapperLayout';
+import EnterPriceTop from '../components/enterprise/EnterPriceTop';
 
 export default function Upgrade() {
   return (

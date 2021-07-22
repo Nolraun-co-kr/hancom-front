@@ -1,7 +1,7 @@
 import React from 'react';
-import WrapperLayout from '@/components/WrapperLayout';
-import FootLink from '@/components/common/FootLink';
-import Visual from '@/components/common/Visual';
+import WrapperLayout from '../components/WrapperLayout';
+import FootLink from '../components/common/FootLink';
+import Visual from '../components/common/Visual';
 
 export default function Certification() {
   return (

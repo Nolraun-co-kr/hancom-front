@@ -1,5 +1,5 @@
 import React from 'react';
-import WrapperLayout from '@/components/WrapperLayout';
+import WrapperLayout from '../components/WrapperLayout';
 
 export default function Private() {
   return (

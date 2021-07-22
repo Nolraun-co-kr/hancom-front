@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useRouter } from 'next/router';
-import Pagination from '@/components/common/Pagination';
-import ReferenceItem from '@/components/reference/ReferenceItem';
+import Pagination from '../../components/common/Pagination';
+import ReferenceItem from '../../components/reference/ReferenceItem';
 import { useDispatch, useSelector } from 'react-redux';
 import { getManyReferenceRequest } from '../../redux/actions/reference';
 
