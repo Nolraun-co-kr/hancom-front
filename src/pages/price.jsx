@@ -3,6 +3,7 @@ import WrapperLayout from '../components/WrapperLayout';
 import FootLink from '../components/common/FootLink';
 import Faq from '../containers/faq';
 import Visual from '../components/common/Visual';
+import styled from 'styled-components';
 
 export default function Price() {
   const [type, setType] = useState('month');
@@ -19,7 +20,7 @@ export default function Price() {
   );
   return (
     <WrapperLayout>
-      <>
+      <Container>
         <div className="container sub price">
           <Visual title={'가격안내'} description={'한컴OK싸인 가격안내.'} />
           <div className="content">
@@ -298,7 +299,214 @@ export default function Price() {
           </div>
           <FootLink />
         </div>
-      </>
+      </Container>
     </WrapperLayout>
   );
 }
+
+const Container = styled.div`
+  .price__info {
+    padding: 100px 0;
+    margin-bottom: 100px;
+    @media screen and (max-width: 1024px) {
+      padding: 50px;
+      margin-bottom: 50px;
+    }
+    .btnarea {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 80px;
+      a {
+        width: calc(230px / 2);
+        height: 56px;
+        display: flex;
+        background: #eee;
+        &.active {
+          span {
+            background: #4679f6;
+            color: #fff;
+            border-radius: 50px !important;
+          }
+        }
+        &:first-child {
+          border-radius: 50px 0 0 50px;
+        }
+        &:last-child {
+          border-radius: 0 50px 50px 0;
+        }
+        span {
+          font-size: 20px;
+          color: #999;
+          width: 100%;
+          height: 100%;
+          text-align: center;
+          line-height: 56px;
+        }
+      }
+      @media screen and (max-width: 1024px) {
+        margin-bottom: 25px;
+        a {
+          height: 44px;
+          span {
+            font-size: 15px;
+            line-height: 44px;
+          }
+        }
+      }
+    }
+
+    .list {
+      display: flex;
+      justify-content: center;
+      @media screen and (max-width: 1024px) {
+        flex-wrap: wrap;
+      }
+      .col {
+        min-height: 880px;
+        flex: 1;
+        border: 1px solid #ccc;
+        background: #fff;
+        border-radius: 10px;
+        margin-right: 26px;
+        &:last-child {
+          margin-right: 0;
+        }
+        &.free {
+          border-top: 15px solid #999;
+        }
+        &.pro {
+          border-top: 15px solid #0090ff;
+          .tit {
+            color: #0090ff;
+          }
+        }
+        &.business {
+          border-top: 15px solid #2e5fd8;
+        }
+        &.enterprise {
+          border-top: 15px solid #000;
+        }
+        @media screen and (max-width: 1024px) {
+          min-height: auto;
+          margin-right: 0;
+          width: 49%;
+          flex: none;
+          margin-bottom: 40px;
+          &:nth-child(2n) {
+            margin-left: 2%;
+          }
+        }
+        @media screen and (max-width: 768px) {
+          width: 100%;
+          &:nth-child(2n) {
+            margin-left: 0;
+          }
+        }
+      }
+      .tit {
+        font-size: 28px;
+        color: #111;
+        border-bottom: 1px solid #c4c4c4;
+        padding: 20px 0;
+        text-align: center;
+        font-weight: 500;
+      }
+      .priceNum {
+        padding: 20px;
+        border-bottom: 1px solid #eee;
+        h3 {
+          display: flex;
+          align-items: baseline;
+          font-size: 32px;
+          color: #111;
+          font-weight: 600;
+          margin-bottom: 10px;
+          span {
+            font-size: 20px;
+            font-weight: normal;
+            &.slash {
+              font-size: 24px;
+              margin: 0 5px;
+            }
+          }
+        }
+        p {
+          font-size: 14px;
+          color: #666;
+          line-height: 1.5em;
+          height: 3em;
+          margin-bottom: 20px;
+        }
+        a {
+          width: 100%;
+          height: 50px;
+          font-size: 16px;
+          border-radius: 4px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          &.border {
+            color: #111;
+            border: 1px solid #111;
+          }
+          &.blue {
+            background: #4679f6;
+            color: #fff;
+          }
+          &.black {
+            background: #111;
+            color: #fff;
+          }
+        }
+        @media screen and (max-width: 1024px) {
+          text-align: center;
+          h3 {
+            justify-content: center;
+            span {
+              &.slash {
+                font-size: 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .pricedesc {
+      padding: 20px;
+      li {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        p {
+          font-size: 16px;
+          color: #111;
+          span {
+            color: #2e5fd8;
+            font-weight: 600;
+          }
+        }
+        i {
+          font-size: 12px;
+          color: #fff;
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          text-align: center;
+          line-height: 20px;
+          background: #ccc;
+        }
+      }
+      @media screen and (max-width: 1024px) {
+        li {
+          p {
+            font-size: 13px;
+          }
+        }
+      }
+    }
+  }
+`;

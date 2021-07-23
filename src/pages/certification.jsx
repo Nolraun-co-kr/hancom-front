@@ -2,11 +2,12 @@ import React from 'react';
 import WrapperLayout from '../components/WrapperLayout';
 import FootLink from '../components/common/FootLink';
 import Visual from '../components/common/Visual';
+import styled from 'styled-components';
 
 export default function Certification() {
   return (
     <WrapperLayout>
-      <div className="container sub security security--certified">
+      <Container>
         <Visual
           type={'m-type1'}
           title={'보안 & 법률정보'}
@@ -99,9 +100,197 @@ export default function Certification() {
             </div>
           </div>
         </div>
-
         <FootLink />
-      </div>
+      </Container>
     </WrapperLayout>
   );
 }
+
+const Container = styled.div`
+  .security__title {
+    padding: 100px 0;
+    text-align: center;
+    h3 {
+      font-size: 58px;
+      color: #333;
+      line-height: 1.3em;
+      font-weight: 400;
+      margin-bottom: 15px;
+    }
+    p {
+      font-size: 20px;
+      color: rgba(51, 51, 51, 0.7);
+    }
+    @media screen and (max-width: 1024px) {
+      padding: 50px 0;
+      h3 {
+        font-size: 30px;
+        margin-bottom: 12px;
+      }
+      p {
+        font-size: 18px;
+      }
+    }
+    @media screen and (max-width: 768px) {
+      h3 {
+        font-size: 24px;
+      }
+      p {
+        font-size: 13px;
+      }
+    }
+  }
+
+  .certified__tit {
+    font-size: 40px;
+    margin-bottom: 40px;
+    color: #111;
+    @media screen and (max-width: 1024px) {
+      font-size: 30px;
+    }
+    @media screen and (max-width: 768px) {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+  }
+  .certified__top {
+    .wrap {
+      display: flex;
+      padding-bottom: 100px;
+      border-bottom: 1px solid #ccc;
+    }
+    .img {
+      width: 600px;
+      flex: none;
+      margin-right: 44px;
+    }
+    .txt {
+      h4 {
+        font-size: 24px;
+        font-weight: 500;
+        color: #333;
+        margin-bottom: 10px;
+      }
+      p {
+        font-size: 16px;
+        color: #666;
+        line-height: 1.5em;
+        margin-bottom: 20px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+    @media screen and (max-width: 1024px) {
+      .wrap {
+        flex-direction: column;
+        padding-bottom: 30px;
+      }
+      .img {
+        width: 100%;
+        margin-right: 0;
+        flex: 1;
+        text-align: center;
+        margin-bottom: 20px;
+        img {
+          width: 100%;
+        }
+      }
+    }
+    @media screen and (max-width: 768px) {
+      .txt {
+        h4 {
+          font-size: 18px;
+        }
+        p {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+
+  .certified__bottom {
+    padding: 60px 0 100px;
+    .wrap {
+      display: flex;
+      align-items: center;
+    }
+    .img {
+      width: 600px;
+      flex: none;
+      margin-left: 44px;
+    }
+    li {
+      margin-bottom: 40px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    .method__tit {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      span {
+        font-size: 24px;
+        margin-right: 8px;
+        color: #fff;
+        width: 36px;
+        height: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background: #333;
+        font-weight: 500;
+      }
+      p {
+        font-size: 24px;
+        color: #333;
+        font-weight: 500;
+      }
+    }
+    .method__desc {
+      font-size: 16px;
+      color: rgba(51, 51, 51, 0.7);
+      line-height: 1.5em;
+    }
+    @media screen and (max-width: 1024px) {
+      padding: 30px 0 50px;
+      .wrap {
+        flex-direction: column;
+      }
+      .txt {
+        order: 2;
+      }
+      .img {
+        order: 1;
+        flex: 1;
+        margin-left: 0;
+        margin-bottom: 20px;
+        text-align: center;
+        width: 100%;
+        img {
+          width: 100%;
+        }
+      }
+      li {
+        margin-bottom: 20px;
+      }
+      .method__tit {
+        span {
+          font-size: 15px;
+          width: 24px;
+          height: 24px;
+        }
+        p {
+          font-size: 18px;
+        }
+      }
+    }
+    @media screen and (max-width: 768px) {
+      .method__desc {
+        font-size: 13px;
+      }
+    }
+  }
+`;

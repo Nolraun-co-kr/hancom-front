@@ -2,11 +2,12 @@ import React from 'react';
 import WrapperLayout from '../components/WrapperLayout';
 import Visual from '../components/common/Visual';
 import FootLink from '../components/common/FootLink';
+import styled from 'styled-components';
 
 export default function Certification() {
   return (
     <WrapperLayout>
-      <>
+      <Container>
         <div className="container sub security">
           <Visual
             type={'m-type1'}
@@ -157,7 +158,192 @@ export default function Certification() {
           </div>
           <FootLink />
         </div>
-      </>
+      </Container>
     </WrapperLayout>
   );
 }
+
+const Container = styled.div`
+  .security__title {
+    padding: 100px 0;
+    text-align: center;
+    h3 {
+      font-size: 58px;
+      color: #333;
+      line-height: 1.3em;
+      font-weight: 400;
+      margin-bottom: 15px;
+    }
+    p {
+      font-size: 20px;
+      color: rgba(51, 51, 51, 0.7);
+    }
+    @media screen and (max-width: 1024px) {
+      padding: 50px 0;
+      h3 {
+        font-size: 30px;
+        margin-bottom: 12px;
+      }
+      p {
+        font-size: 18px;
+      }
+    }
+    @media screen and (max-width: 768px) {
+      h3 {
+        font-size: 24px;
+      }
+      p {
+        font-size: 13px;
+      }
+    }
+  }
+
+  .security__bill {
+    background: #fafafa;
+    padding: 100px 0;
+    @media screen and (max-width: 1024px) {
+      padding: 50px 0;
+    }
+    .tit {
+      font-size: 41px;
+      color: #111;
+      text-align: center;
+      @media screen and (max-width: 1024px) {
+        font-size: 20px;
+      }
+    }
+    .row {
+      display: flex;
+      padding: 60px 0;
+      border-bottom: 1px solid #ccc;
+      &:last-child {
+        border-bottom: none;
+      }
+      i {
+        margin-right: 123px;
+      }
+      h4 {
+        font-size: 20px;
+        color: #333;
+        line-height: 1.5em;
+        font-weight: 500;
+        margin-bottom: 5px;
+      }
+      p {
+        font-size: 16px;
+        color: #666;
+        line-height: 1.5em;
+        margin-bottom: 20px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        strong {
+          font-weight: 600;
+        }
+      }
+      .depth {
+        padding-left: 20px;
+        margin-bottom: 14px;
+        p {
+          font-size: 16px;
+          margin-bottom: 0;
+          color: #999;
+        }
+      }
+      @media screen and (max-width: 1024px) {
+        padding: 30px 0;
+        flex-direction: column;
+        i {
+          margin-right: 0;
+          margin-bottom: 10px;
+          width: 60px;
+          img {
+            width: 100%;
+          }
+        }
+        h4 {
+          font-size: 18px;
+        }
+      }
+      @media screen and (max-width: 768px) {
+        p {
+          font-size: 13px;
+        }
+        .depth {
+          padding-left: 10px;
+          p {
+            font-size: 13px;
+          }
+        }
+      }
+    }
+  }
+
+  .security__system {
+    padding: 100px 0;
+    .tit {
+      font-size: 41px;
+      color: #111;
+      line-height: 1.3em;
+      text-align: center;
+      margin-bottom: 60px;
+    }
+    ul {
+      display: flex;
+      justify-content: space-between;
+      li {
+        flex: 1;
+        margin-right: 64px;
+        &:last-child {
+          margin-right: 0;
+        }
+        i {
+          margin-bottom: 15px;
+        }
+        h4 {
+          font-size: 20px;
+          color: #333;
+          line-height: 1.5em;
+          margin-bottom: 5px;
+          font-weight: 500;
+        }
+        p {
+          font-size: 16px;
+          color: #666;
+          line-height: 1.5em;
+        }
+      }
+    }
+
+    @media screen and (max-width: 1024px) {
+      padding: 50px 0;
+      .tit {
+        font-size: 20px;
+        margin-bottom: 30px;
+      }
+      ul {
+        flex-direction: column;
+        li {
+          margin-right: 0;
+          margin-bottom: 39px;
+          text-align: center;
+          &:last-child {
+            margin-bottom: 0;
+          }
+          h4 {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+    @media screen and (max-width: 768px) {
+      ul {
+        li {
+          p {
+            font-size: 13px;
+          }
+        }
+      }
+    }
+  }
+`;

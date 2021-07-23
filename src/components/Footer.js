@@ -1,9 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
+import styled from 'styled-components';
 
 export default function Footer() {
   return (
-    <footer className="footer">
+    <FooterLayout>
       <div className="wrap">
         <div className="footer__corp">
           <div className="corp__list">
@@ -33,6 +34,69 @@ export default function Footer() {
           </select>
         </div>
       </div>
-    </footer>
+    </FooterLayout>
   );
 }
+
+const FooterLayout = styled.footer`
+  background: #313131;
+  .wrap {
+    padding: 55px 10px;
+    display: flex;
+    @media screen and (max-width: 768px) {
+      padding: 30px 20px;
+      flex-direction: column;
+    }
+  }
+  .footer__corp {
+    .corp__list {
+      margin-bottom: 15px;
+      a {
+        font-size: 14px;
+        color: #fff;
+        & ~ a {
+          margin-left: 20px;
+        }
+      }
+    }
+    .addr {
+      p {
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.5);
+        line-height: 1.6em;
+      }
+    }
+    @media screen and (max-width: 768px) {
+      order: 2;
+      .corp__list {
+        a {
+          font-size: 13px;
+        }
+      }
+      .addr {
+        p {
+          font-size: 11px;
+        }
+      }
+    }
+  }
+
+  .footer__relation {
+    margin-left: auto;
+    width: 200px;
+    height: 30px;
+    select {
+      width: 100%;
+      height: 100%;
+      background: rgba(204, 204, 204, 0.2) url(../images/plus.png) no-repeat calc(100% - 8px) center;
+      padding: 0 8px;
+      color: #fff;
+      font-size: 14px;
+    }
+
+    @media screen and (max-width: 768px) {
+      order: 1;
+      margin-bottom: 20px;
+    }
+  }
+`;

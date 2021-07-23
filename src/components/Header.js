@@ -125,6 +125,7 @@ const HeaderLayout = styled.header`
       display: none;
     }
   }
+
   .nav__item {
     height: 100%;
     display: flex;
@@ -214,5 +215,4 @@ const HeaderLayout = styled.header`
       display: block;
     }
   }
-
 `;

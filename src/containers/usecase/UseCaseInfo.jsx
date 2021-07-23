@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { useDispatch, useSelector } from 'react-redux';
 import { getOneUsecaseRequest } from '../../redux/actions/usecase';
+import styled from 'styled-components';
 
 export default function UseCaseInfo() {
   const router = useRouter();
@@ -22,7 +23,7 @@ export default function UseCaseInfo() {
   }, [id]);
 
   return (
-    <>
+    <Container>
       <div className="post__top">
         <div className="post__title">
           <h3>
@@ -81,6 +82,158 @@ export default function UseCaseInfo() {
           sending out liability waivers and NDAs to guests.
         </div>
       </div>
-    </>
+    </Container>
   );
 }
+
+const Container = styled.div`
+  .post__top {
+    padding-top: 135px;
+    position: relative;
+    &::after {
+      content: '';
+      background: url('../images/quote.png') no-repeat left center;
+      background-size: contain;
+      width: 200px;
+      height: 200px;
+      z-index: -1;
+      position: absolute;
+      left: -120px;
+      top: 50px;
+    }
+    @media screen and (max-width: 1024px) {
+      padding-top: 125px;
+      &::after {
+        width: 76px;
+        height: 76px;
+        left: 0px;
+      }
+    }
+  }
+  .post__title {
+    padding-bottom: 70px;
+    margin-bottom: 70px;
+    border-bottom: 1px solid #111;
+    h3 {
+      font-size: 40px;
+      color: #111;
+      margin-bottom: 24px;
+      line-height: 1.3em;
+    }
+    @media screen and (max-width: 1024px) {
+      padding-bottom: 30px;
+      margin-bottom: 30px;
+      h3 {
+        font-size: 20px;
+        line-height: 1.3em;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  .post__bottom {
+    .imgarea {
+      margin-bottom: 80px;
+      img {
+        width: 100%;
+      }
+      .info {
+        margin-top: 24px;
+        display: flex;
+        align-items: center;
+        .col {
+          padding: 0 19px;
+          border-left: 1px solid #e1e1e1;
+          width: 300px;
+        }
+        p {
+          font-size: 16px;
+          color: #999;
+          line-height: 1.3em;
+          margin-bottom: 4px;
+        }
+        h4 {
+          color: #333;
+          font-size: 24px;
+          font-weight: 600;
+          line-height: 1.3em;
+        }
+      }
+    }
+    .txtarea {
+      white-space: pre-line;
+      font-size: 16px;
+      color: #666;
+      line-height: 1.8em;
+      strong {
+        font-weight: 600;
+      }
+    }
+    @media screen and (max-width: 1024px) {
+      .imgarea {
+        margin-bottom: 25px;
+        .info {
+          margin-top: 15px;
+          flex-direction: column;
+          .col {
+            width: 100%;
+            padding-bottom: 30px;
+            &:last-child {
+              padding-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+    @media screen and (max-width: 768px) {
+      .imgarea {
+        .info {
+          p {
+            font-size: 13px;
+          }
+          h4 {
+            font-size: 15px;
+          }
+        }
+      }
+      .txtarea {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .userInfo {
+    display: flex;
+    align-items: center;
+    .thumb {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-right: 8px;
+    }
+    span {
+      font-size: 14px;
+      color: #111;
+      &.userName {
+        padding-right: 15px;
+        margin-right: 15px;
+        position: relative;
+        &::after {
+          content: '';
+          width: 4px;
+          height: 4px;
+          background: #c4c4c4;
+          border-radius: 50%;
+          position: absolute;
+          right: 0;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+      &.date {
+        color: #c4c4c4;
+      }
+    }
+  }
+`;
