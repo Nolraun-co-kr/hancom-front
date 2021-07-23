@@ -1,5 +1,6 @@
 import React, { useCallback, useState } from 'react';
 import Link from 'next/link';
+import styled from 'styled-components';
 
 export default function MobileGnb() {
   const [toggleIndex, setToggleIndex] = useState(null);
@@ -12,7 +13,7 @@ export default function MobileGnb() {
     }
   }, []);
   return (
-    <div className="m-navWrap">
+    <MobileGnbLayout>
       <div className="header__etc">
         <div className="wrap">
           <a href="">로그인</a>
@@ -70,6 +71,67 @@ export default function MobileGnb() {
           )}
         </div>
       </nav>
-    </div>
+    </MobileGnbLayout>
   );
 }
+
+const MobileGnbLayout = styled.div`
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: #fff;
+  display: none;
+  left: 0;
+  top: 65px;
+  z-index: 7000;
+  @media screen and (max-width: 1024px) {
+    display: block;
+
+    .header__etc {
+      display: flex;
+      padding: 30px 0;
+      border-bottom: 1px solid #e1e1e1;
+      .wrap {
+        display: flex;
+      }
+    }
+  }
+
+  .m-nav {
+    margin-top: 45px;
+    .title {
+      font-size: 16px;
+      color: #999;
+      padding: 0 25px;
+      margin-bottom: 15px;
+    }
+  }
+  .m-nav__item {
+    &.active {
+      background: #f8f9fa;
+      .m-nav__link {
+        background: url('../images/arrow_up.png') no-repeat calc(100% - 25px) center;
+      }
+    }
+  }
+  .m-nav__link {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    padding: 0 25px;
+    font-size: 16px;
+    color: #333;
+    background: url('../images/arrow_down.png') no-repeat calc(100% - 25px) center;
+  }
+  .m-nav__depth {
+    a {
+      display: flex;
+      height: 55px;
+      align-items: center;
+      padding: 0 45px;
+      font-size: 14px;
+      color: #666;
+    }
+  }
+`;
