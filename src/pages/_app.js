@@ -2,8 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { wrapper } from '../store';
 
-// import './styles.css';
-
 import GlobalStyle from './_globalStyle';
 
 function MyApp({ Component, pageProps }) {

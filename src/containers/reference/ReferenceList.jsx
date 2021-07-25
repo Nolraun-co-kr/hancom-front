@@ -4,6 +4,7 @@ import Pagination from '../../components/common/Pagination';
 import ReferenceItem from '../../components/reference/ReferenceItem';
 import { useDispatch, useSelector } from 'react-redux';
 import { getManyReferenceRequest } from '../../redux/actions/reference';
+import styled from 'styled-components';
 
 export default function ReferenceList({ category }) {
   const router = useRouter();
@@ -21,12 +22,25 @@ export default function ReferenceList({ category }) {
 
   return (
     <>
-      <ul className="referencelist">
+      <Container>
         {referenceList?.map(data => (
           <ReferenceItem key={data.id} data={data} />
         ))}
-      </ul>
+      </Container>
       <Pagination />
     </>
   );
 }
+
+const Container = styled.ul`
+  display: flex;
+  margin: 0 -11px;
+  flex-wrap: wrap;
+
+  @media screen and (max-width: 1200px) {
+    margin: 0;
+  }
+  @media screen and (max-width: 768px) {
+    display: block;
+  }
+`;

@@ -1,26 +1,22 @@
 import React from 'react';
-import Link from 'next/link';
 import styled from 'styled-components';
 
-export default function EnterPriceTop() {
+export default function MainBlueBox() {
   return (
-    <div className="content">
+    <BlueBox>
       <div className="wrap">
-        <BlueBox small={true}>
-          <div className="txtBox">
-            <h2>ENTERPRISE</h2>
-            <p>
-              ENTERPRISE 계정으로 Upgrade 를 원하시는
-              <br />
-              고객님께서는 아래 문의하기 버튼을 눌러 주세요
-            </p>
-            <Link href={'/inquiry'}>
-              <a>문의하기</a>
-            </Link>
-          </div>
-        </BlueBox>
+        <div className="txtBox">
+          <h3>All in One Solution</h3>
+          <h2>Are You Ready?</h2>
+          <p>
+            준비 되었으면 아래 체험하기 버튼을 눌러 한컴OK싸인을 확인해보세요.
+            <br />
+            한컴이 만들면 다릅니다.
+          </p>
+          <a href="">OK싸인 체험하기</a>
+        </div>
       </div>
-    </div>
+    </BlueBox>
   );
 }
 
@@ -28,14 +24,14 @@ const BlueBox = styled.div`
   padding-top: 100px;
   padding-bottom: 100px;
   background: #2e5fd8;
-  margin-bottom: 60px;
-  @media screen and (max-width: 1024px) {
-    margin-bottom: 50px;
-    .wrap {
-      padding: 0;
+  &.small {
+    .txtBox {
+      h2 {
+        font-size: 56px;
+        margin-top: 0;
+      }
     }
   }
-
   .txtBox {
     text-align: center;
     h3 {
@@ -44,10 +40,10 @@ const BlueBox = styled.div`
       font-weight: 500;
     }
     h2 {
-      font-size: ${props => (props.small ? '56px' : '64px')};
-      margin: ${props => (!props.small ? '20px 0 20px 0' : '0px 0 20px 0')};
+      font-size: 64px;
       color: #fff;
       font-weight: 500;
+      margin: 20px 0;
     }
     p {
       font-size: 20px;
@@ -73,7 +69,7 @@ const BlueBox = styled.div`
     padding-bottom: 60px;
     .txtBox {
       h2 {
-        font-size: ${props => (props.small ? '30px' : '30px')};
+        font-size: 30px;
       }
       p {
         font-size: 18px;
@@ -87,7 +83,8 @@ const BlueBox = styled.div`
     &.small {
       .txtBox {
         h2 {
-          font-size: ;
+          font-size: 30px;
+          margin-top: 0;
         }
       }
     }
@@ -100,7 +97,7 @@ const BlueBox = styled.div`
         font-size: 14px;
       }
       h2 {
-        font-size: ${props => (props.small ? '24px' : '24px')};
+        font-size: 24px;
       }
       p {
         font-size: 16px;
@@ -109,6 +106,14 @@ const BlueBox = styled.div`
         width: 182px;
         height: 44px;
         font-size: 16px;
+      }
+    }
+    &.small {
+      .txtBox {
+        h2 {
+          font-size: 24px;
+          margin-top: 0;
+        }
       }
     }
   }

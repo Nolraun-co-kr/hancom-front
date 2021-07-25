@@ -1,61 +1,34 @@
 import React from 'react';
 import WrapperLayout from '../components/WrapperLayout';
-import EnterPriceTop from '../components/enterprise/EnterPriceTop';
 import styled from 'styled-components';
+import EnterPriceWrapper from '../components/enterPrice/EnterPriceWrapper';
 
 export default function Payments() {
   return (
     <WrapperLayout>
       <Container>
-        <div className="container sub enterprise">
-          <div className="enterprise__inn">
-            <EnterPriceTop />
-
-            <div className="enterprise__cont">
-              <div className="wrap">
-                <div className="statebox">
-                  <div className="txt">
-                    <div className="img">
-                      <img src="/images/akar-icons_circle-check.png" alt="" />
-                    </div>
-                    <p>
-                      <span className="check">결제가 완료</span> 되었습니다 .<br />
-                      Tasks 페이지로 이동해 계약을 시작해 보세요 .
-                    </p>
-                  </div>
-                  <div className="button-area">
-                    <a href="">Go to My Tasks</a>
-                  </div>
-                </div>
+        <EnterPriceWrapper>
+          <div className="statebox">
+            <div className="txt">
+              <div className="img">
+                <img src="/images/akar-icons_circle-check.png" alt="" />
               </div>
+              <p>
+                <span className="check">결제가 완료</span> 되었습니다 .<br />
+                Tasks 페이지로 이동해 계약을 시작해 보세요 .
+              </p>
+            </div>
+            <div className="button-area">
+              <a href="">Go to My Tasks</a>
             </div>
           </div>
-        </div>
+        </EnterPriceWrapper>
       </Container>
     </WrapperLayout>
   );
 }
 
 const Container = styled.div`
-  .enterprise {
-    .enterprise__inn {
-      padding: 30px 0 100px;
-      @media screen and (max-width: 1024px) {
-        padding: 0 0 50px;
-      }
-    }
-
-    .content {
-      margin-bottom: 60px;
-      @media screen and (max-width: 1024px) {
-        margin-bottom: 50px;
-        .wrap {
-          padding: 0;
-        }
-      }
-    }
-  }
-
   .statebox {
     .txt {
       text-align: center;

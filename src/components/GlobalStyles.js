@@ -96,6 +96,10 @@ const GlobalStyle = createGlobalStyle`
     .container {
       overflow-x: hidden;
     }
+    
+    .content {
+        flex: 1;,
+    }
 `;
 
 export default GlobalStyle;

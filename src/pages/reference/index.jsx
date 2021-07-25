@@ -23,9 +23,6 @@ export default function Reference() {
             title={'자료실'}
             description={'검증된 양식 문서를 사용 하여 전자서명을 진행하세요.'}
           />
-          <div className="visual m-type1">
-            <div className="txtBox"></div>
-          </div>
           <div className="reference">
             <div className="wrap">
               <div className="category">
@@ -230,73 +227,6 @@ const Container = styled.div`
     }
     @media screen and (max-width: 1200px) {
       display: none;
-    }
-  }
-  .referencelist {
-    display: flex;
-    margin: 0 -11px;
-    flex-wrap: wrap;
-    li {
-      padding: 0 11px;
-      width: calc(100% / 3);
-      margin-bottom: 40px;
-    }
-    .referenceitem {
-      min-height: 380px;
-      border: 1px solid #ededed;
-      .img {
-        height: 208px;
-        img {
-          width: 100%;
-          height: 100%;
-        }
-      }
-      .txt {
-        padding: 20px 15px;
-        h4 {
-          font-size: 20px;
-          color: #333;
-          font-weight: 500;
-          margin-bottom: 5px;
-        }
-        p {
-          font-size: 16px;
-          color: rgba(51, 51, 51, 0.7);
-          margin-bottom: 25px;
-          line-height: 1.5em;
-        }
-        a {
-          display: inline-block;
-          font-size: 14px;
-          color: #333;
-          padding-right: 15px;
-          background: url('../images/arrow_right.png') no-repeat right center;
-        }
-      }
-    }
-    @media screen and (max-width: 1200px) {
-      margin: 0;
-      li {
-        padding: 0;
-        width: 100%;
-        margin-bottom: 20px;
-      }
-      .referenceitem {
-        min-height: auto;
-        .img {
-          height: 200px;
-        }
-        .txt {
-          h4 {
-            font-size: 18px;
-            margin-bottom: 16px;
-          }
-          p {
-            font-size: 13px;
-            margin-bottom: 12px;
-          }
-        }
-      }
     }
   }
 `;

@@ -1,4 +1,5 @@
 import React, { useCallback, useState } from 'react';
+import styled from 'styled-components';
 
 function MultipleHeader() {
   return (
@@ -18,48 +19,78 @@ export default function Multiple() {
 
   const handleClickSetTab = useCallback(idx => setTabIndex(idx), [tabIndex]);
   return (
-    <div className="section section4 pdCom">
-      <div className="wrap">
-        <div className="tab-wrap">
-          <div className="tab-item">
-            <div className="img">
-              <div className="tit m-show">
-                <MultipleHeader />
-              </div>
-              <img src={`/images/function-${1}.png`} alt="" />
-            </div>
-            <div className="info">
-              <div className="tit">
-                <MultipleHeader />
-              </div>
-              <div className="tab-buttonWrap">
-                <div className={`tab-button function1 ${tabIndex === 0 && 'active'}`}>
-                  <button className="button" onClick={() => handleClickSetTab(0)}>
-                    파일 첨부 기능
-                  </button>
-                  {tabIndex === 0 && <p>전자서명에 필요한 파일을 첨부할 수 있습니다.</p>}
+    <Container>
+      <div className="section section4 pdCom">
+        <div className="wrap">
+          <div className="tab-wrap">
+            <div className="tab-item">
+              <div className="img">
+                <div className="tit m-show">
+                  <MultipleHeader />
                 </div>
-                <div className={`tab-button function2 ${tabIndex === 1 && 'active'}`}>
-                  <button className="button" onClick={() => handleClickSetTab(1)}>
-                    양식문서 생성 및 관리
-                  </button>
-                  {tabIndex === 1 && (
-                    <p>자주쓰는 양식을 PDF 템플릿으로 생성 후 재사용 할 수 있습니다.</p>
-                  )}
+                <img src={`/images/function-${1}.png`} alt="" />
+              </div>
+              <div className="info">
+                <div className="tit">
+                  <MultipleHeader />
                 </div>
-                <div className={`tab-button function3 ${tabIndex === 2 && 'active'}`}>
-                  <button className="button" onClick={() => handleClickSetTab(2)}>
-                    맞춤 e-Mail
-                  </button>
-                  {tabIndex === 2 && (
-                    <p>회사 로고 및 이름 등을 고객이 원하는대로 변경할수 있습니다.</p>
-                  )}
+                <div className="tab-buttonWrap">
+                  <div className={`tab-button function1 ${tabIndex === 0 && 'active'}`}>
+                    <button className="button" onClick={() => handleClickSetTab(0)}>
+                      파일 첨부 기능
+                    </button>
+                    {tabIndex === 0 && <p>전자서명에 필요한 파일을 첨부할 수 있습니다.</p>}
+                  </div>
+                  <div className={`tab-button function2 ${tabIndex === 1 && 'active'}`}>
+                    <button className="button" onClick={() => handleClickSetTab(1)}>
+                      양식문서 생성 및 관리
+                    </button>
+                    {tabIndex === 1 && (
+                      <p>자주쓰는 양식을 PDF 템플릿으로 생성 후 재사용 할 수 있습니다.</p>
+                    )}
+                  </div>
+                  <div className={`tab-button function3 ${tabIndex === 2 && 'active'}`}>
+                    <button className="button" onClick={() => handleClickSetTab(2)}>
+                      맞춤 e-Mail
+                    </button>
+                    {tabIndex === 2 && (
+                      <p>회사 로고 및 이름 등을 고객이 원하는대로 변경할수 있습니다.</p>
+                    )}
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </Container>
   );
 }
+
+const Container = styled.div`
+  .section4 {
+    background: #fafafa;
+    position: relative;
+    &::after {
+      content: '';
+      width: 25%;
+      height: 50%;
+      background: url('../images/dotsbg.png') no-repeat center;
+      background-size: contain;
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 100;
+    }
+    .wrap {
+      position: relative;
+      z-index: 110;
+    }
+    @media screen and (max-width: 1300px) {
+      &::after {
+        width: 176px;
+        height: 135px;
+      }
+    }
+  }
+`;

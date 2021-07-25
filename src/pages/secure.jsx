@@ -108,7 +108,6 @@ export default function Certification() {
               </div>
             </div>
           </div>
-
           <div className="security__system">
             <div className="wrap">
               <div className="tit">

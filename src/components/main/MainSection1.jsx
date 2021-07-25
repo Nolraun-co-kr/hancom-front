@@ -65,9 +65,9 @@ const Container = styled.div`
       display: none;
     }
     @media screen and (max-width: 1200px) {
-      // background: url('../images/main_section-1_bg-m.png') no-repeat center;
+      background: url('../images/mobile-main-sec1-bg.png') no-repeat center;
       background-size: cover;
-      background: skyblue;
+      // background: skyblue;
       .wrap {
         padding-top: 95px;
         padding-bottom: 0px;

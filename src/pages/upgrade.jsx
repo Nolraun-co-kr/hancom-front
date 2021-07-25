@@ -1,95 +1,67 @@
 import React from 'react';
 import WrapperLayout from '../components/WrapperLayout';
-import EnterPriceTop from '../components/enterprise/EnterPriceTop';
 import styled from 'styled-components';
+import EnterPriceWrapper from '../components/enterPrice/EnterPriceWrapper';
 
 export default function Upgrade() {
   return (
     <WrapperLayout>
       <Container>
-        <div className="container sub enterprise">
-          <div className="enterprise__inn">
-            <EnterPriceTop />
-            <div className="enterprise__cont">
-              <div className="wrap">
-                <ul className="changeList">
-                  <li>
-                    <div className="inn">
-                      <div className="img"></div>
-                      <div className="tit">STARTER</div>
-                      <div className="txt">
-                        Wir und unsere Partner setzen Cookies ein, um t3n.de stetig für dich zu
-                        verbessern und unsere (überwiegend für dich kostenlosen) Inhalte zu
-                        monetarisieren. Um die korrekte Funktion von t3n.de gewährleisten zu können,
-                        setzen wir einige technisch notwenige Cookies (z.B. für unsere eigene
-                        Schrift, damit die Webseite so aussieht wie du es gewohnt bist). Es ist
-                        möglich, dass Daten außerhalb des EWR verarbeitet, Nutzungsprofile gebildet
-                        und mit Daten von anderen Webseiten angereichert werden.
-                      </div>
-                      <a href="">변경 하기</a>
-                    </div>
-                  </li>
-                  <li>
-                    <div className="inn">
-                      <div className="img"></div>
-                      <div className="tit">BUSINESS</div>
-                      <div className="txt">
-                        Wir und unsere Partner setzen Cookies ein, um t3n.de stetig für dich zu
-                        verbessern und unsere (überwiegend für dich kostenlosen) Inhalte zu
-                        monetarisieren. Um die korrekte Funktion von t3n.de gewährleisten zu können,
-                        setzen wir einige technisch notwenige Cookies (z.B. für unsere eigene
-                        Schrift, damit die Webseite so aussieht wie du es gewohnt bist). Es ist
-                        möglich, dass Daten außerhalb des EWR verarbeitet, Nutzungsprofile gebildet
-                        und mit Daten von anderen Webseiten angereichert werden.
-                      </div>
-                      <a href="">변경 하기</a>
-                    </div>
-                  </li>
-                  <li>
-                    <div className="inn">
-                      <div className="img"></div>
-                      <div className="tit">PREMIUM</div>
-                      <div className="txt">
-                        Wir und unsere Partner setzen Cookies ein, um t3n.de stetig für dich zu
-                        verbessern und unsere (überwiegend für dich kostenlosen) Inhalte zu
-                        monetarisieren. Um die korrekte Funktion von t3n.de gewährleisten zu können,
-                        setzen wir einige technisch notwenige Cookies (z.B. für unsere eigene
-                        Schrift, damit die Webseite so aussieht wie du es gewohnt bist). Es ist
-                        möglich, dass Daten außerhalb des EWR verarbeitet, Nutzungsprofile gebildet
-                        und mit Daten von anderen Webseiten angereichert werden.
-                      </div>
-                      <a href="">변경 하기</a>
-                    </div>
-                  </li>
-                </ul>
+        <EnterPriceWrapper>
+          <ul className="changeList">
+            <li>
+              <div className="inn">
+                <div className="img"></div>
+                <div className="tit">STARTER</div>
+                <div className="txt">
+                  Wir und unsere Partner setzen Cookies ein, um t3n.de stetig für dich zu verbessern
+                  und unsere (überwiegend für dich kostenlosen) Inhalte zu monetarisieren. Um die
+                  korrekte Funktion von t3n.de gewährleisten zu können, setzen wir einige technisch
+                  notwenige Cookies (z.B. für unsere eigene Schrift, damit die Webseite so aussieht
+                  wie du es gewohnt bist). Es ist möglich, dass Daten außerhalb des EWR verarbeitet,
+                  Nutzungsprofile gebildet und mit Daten von anderen Webseiten angereichert werden.
+                </div>
+                <a href="">변경 하기</a>
               </div>
-            </div>
-          </div>
-        </div>
+            </li>
+            <li>
+              <div className="inn">
+                <div className="img"></div>
+                <div className="tit">BUSINESS</div>
+                <div className="txt">
+                  Wir und unsere Partner setzen Cookies ein, um t3n.de stetig für dich zu verbessern
+                  und unsere (überwiegend für dich kostenlosen) Inhalte zu monetarisieren. Um die
+                  korrekte Funktion von t3n.de gewährleisten zu können, setzen wir einige technisch
+                  notwenige Cookies (z.B. für unsere eigene Schrift, damit die Webseite so aussieht
+                  wie du es gewohnt bist). Es ist möglich, dass Daten außerhalb des EWR verarbeitet,
+                  Nutzungsprofile gebildet und mit Daten von anderen Webseiten angereichert werden.
+                </div>
+                <a href="">변경 하기</a>
+              </div>
+            </li>
+            <li>
+              <div className="inn">
+                <div className="img"></div>
+                <div className="tit">PREMIUM</div>
+                <div className="txt">
+                  Wir und unsere Partner setzen Cookies ein, um t3n.de stetig für dich zu verbessern
+                  und unsere (überwiegend für dich kostenlosen) Inhalte zu monetarisieren. Um die
+                  korrekte Funktion von t3n.de gewährleisten zu können, setzen wir einige technisch
+                  notwenige Cookies (z.B. für unsere eigene Schrift, damit die Webseite so aussieht
+                  wie du es gewohnt bist). Es ist möglich, dass Daten außerhalb des EWR verarbeitet,
+                  Nutzungsprofile gebildet und mit Daten von anderen Webseiten angereichert werden.
+                </div>
+                <a href="">변경 하기</a>
+              </div>
+            </li>
+          </ul>
+        </EnterPriceWrapper>
       </Container>
     </WrapperLayout>
   );
 }
 
 const Container = styled.div`
-  .enterprise {
-    .enterprise__inn {
-      padding: 30px 0 100px;
-      @media screen and (max-width: 1024px) {
-        padding: 0 0 50px;
-      }
-    }
-
-    .content {
-      margin-bottom: 60px;
-      @media screen and (max-width: 1024px) {
-        margin-bottom: 50px;
-        .wrap {
-          padding: 0;
-        }
-      }
-    }
-  }
   .changeList {
     display: flex;
     margin: 0 -13px;
