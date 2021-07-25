@@ -33,6 +33,7 @@ class MyDocument extends Document {
       <Html lang="kr">
         <Head>
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
+          <link rel="shortcut icon" href="/favicon/favicon.ico" />
           <link
             rel="preload"
             as="style"
