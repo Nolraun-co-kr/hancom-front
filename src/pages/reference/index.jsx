@@ -8,12 +8,47 @@ import Visual from '../../components/common/Visual';
 export default function Reference() {
   const router = useRouter();
   const [tab, setTab] = useState('t1');
+  const [title, setTitle] = useState('거래(물건/금전)');
   const handleClickTab = category => {
     router.push({
       pathname: '/reference',
       query: { category },
-    });
+    }, null, { scroll: false });
     setTab(category);
+    switch(category) {
+      case 't1': {
+        setTitle('거래 (물건/금전)');
+        break;
+      }
+      case 't2': {
+        setTitle('취업/고용');
+        break;
+      }
+      case 't3': {
+        setTitle('회사운영');
+        break;
+      }
+      case 't4': {
+        setTitle('부동산 거래');
+        break;
+      }
+      case 't5': {
+        setTitle('세무/회계');
+        break;
+      }
+      case 't6': {
+        setTitle('하청/용역');
+        break;
+      }
+      case 't7': {
+        setTitle('투자/주식');
+        break;
+      }
+      default: {
+        setTitle('거래 (물건/금전)');
+        break;
+      }
+    }
   };
   return (
     <WrapperLayout>
@@ -93,7 +128,7 @@ export default function Reference() {
                   <a href="">자료실</a>
                 </div>
                 <div className="reference__title">
-                  <h3>거래 (물건/금전)</h3>
+                  <h3>{title}</h3>
                   <p>한컴에서 제공하는 차별화된 제품들을 한컴OK싸인 기능으로 만나볼 수 있습니다.</p>
                 </div>
                 <ReferenceList category={tab || 't1'} />
@@ -167,7 +202,7 @@ const Container = styled.div`
             width: 50%;
             border: 1px solid #ccc;
             // display: table-cell;
-            height: 43px;
+            //height: 43px;
             // float: left;
             // border-collapse:collapse;
             margin-left: -1px;

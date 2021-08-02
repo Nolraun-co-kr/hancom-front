@@ -17,7 +17,7 @@ export default function MainSection1() {
               한컴OK싸인 도입으로 전자서명이 간편해 집니다.
             </p>
             <a href="" className="links">
-              OK싸인 체험하기
+              시작하기
             </a>
           </div>
           <div className="imgBox">
@@ -31,11 +31,16 @@ export default function MainSection1() {
 
 const Container = styled.div`
   .section1 {
-    background: url('../images/main_section-1_bg.png') no-repeat right top;
+    background: url('../images/main-bg.png') no-repeat right top;
     background-size: 65% auto;
     .wrap {
       padding: 200px 0 230px;
       position: relative;
+    }
+    .pc-tablit {
+      position: absolute;
+      right: 0;
+      bottom: 0;
     }
     .txtBox {
       h2 {
@@ -46,7 +51,7 @@ const Container = styled.div`
         }
       }
       p {
-        color: rgba(51, 51, 51, 0.7);
+        color: #333;
         margin-bottom: 70px;
       }
       .links {
@@ -62,7 +67,14 @@ const Container = styled.div`
       }
     }
     .imgBox {
-      display: none;
+      position: absolute;
+      right: 20px;
+      bottom: 7%;
+      z-index: 1;
+      max-width: 60%;
+      img {
+        width: 100%;
+      }
     }
     @media screen and (max-width: 1200px) {
       background: url('../images/mobile-main-sec1-bg.png') no-repeat center;
@@ -75,9 +87,11 @@ const Container = styled.div`
       .txtBox {
         text-align: center;
         margin-bottom: 85px;
+        padding:0 24px;
         h2 {
-          color: #fff;
+          color: #fff !important;
           margin-bottom: 18px;
+          letter-spacing: -.6px !important;
           span {
             color: #fffa7c;
           }
@@ -89,9 +103,9 @@ const Container = styled.div`
           margin: 0 auto;
           width: 166px;
           height: 45px;
-          background: #fff;
           font-size: 16px;
-          border: none;
+          color: #fff;
+          border: 1px solid #fff;
         }
       }
       .imgBox {
@@ -99,6 +113,8 @@ const Container = styled.div`
         text-align: center;
         width: 100%;
         margin-bottom: -18%;
+        position: static;
+        max-width: 100%;
         img {
           width: 100%;
           max-width: 600px;

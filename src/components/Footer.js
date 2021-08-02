@@ -1,15 +1,17 @@
 import React from 'react';
 import Link from 'next/link';
 import styled from 'styled-components';
+import {useRouter} from "next/router";
 
 export default function Footer() {
+  const router = useRouter();
   return (
     <FooterLayout>
       <div className="wrap">
         <div className="footer__corp">
           <div className="corp__list">
-            <Link href={'/private'}>
-              <a>이용약관</a>
+            <Link href={'/private'} >
+              <a className={router.route === '/private' ? 'active' : ''}>이용약관</a>
             </Link>
             <Link href={'/private'}>
               <a>개인정보처리방침</a>
@@ -54,8 +56,12 @@ const FooterLayout = styled.footer`
       a {
         font-size: 14px;
         color: #fff;
+        font-weight: 300;
         & ~ a {
           margin-left: 20px;
+        }
+        &.active {
+          font-weight: 900;
         }
       }
     }
@@ -64,6 +70,9 @@ const FooterLayout = styled.footer`
         font-size: 12px;
         color: rgba(255, 255, 255, 0.5);
         line-height: 1.6em;
+        &:last-child {
+          margin-top: 10px;
+        }
       }
     }
     @media screen and (max-width: 768px) {

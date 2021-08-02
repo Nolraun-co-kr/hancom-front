@@ -11,7 +11,7 @@ export default function MobileGnb() {
     } else {
       setToggleIndex(idx);
     }
-  }, []);
+  }, [toggleIndex]);
   return (
     <MobileGnbLayout>
       <div className="header__etc">
@@ -52,7 +52,7 @@ export default function MobileGnb() {
         </div>
         <div className={`m-nav__item`}>
           <Link href={'/price'}>
-            <a className="m-nav__link">가격 안내</a>
+            <a className="m-nav__link na">가격 안내</a>
           </Link>
         </div>
         <div className={`m-nav__item ${toggleIndex === 3 && 'active'}`}>
@@ -82,7 +82,7 @@ const MobileGnbLayout = styled.div`
   background: #fff;
   display: none;
   left: 0;
-  top: 65px;
+  top: 66px;
   z-index: 7000;
   @media screen and (max-width: 1024px) {
     display: block;
@@ -123,6 +123,9 @@ const MobileGnbLayout = styled.div`
     font-size: 16px;
     color: #333;
     background: url('../images/arrow_down.png') no-repeat calc(100% - 25px) center;
+    &.na {
+      background: none !important;
+    }
   }
   .m-nav__depth {
     a {

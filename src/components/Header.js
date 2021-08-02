@@ -23,7 +23,7 @@ export default function Header() {
 
   return (
     <>
-      <HeaderLayout>
+      <HeaderLayout className={showDepthNav !== null ? 'hasdepth': ''}>
         <div className="wrap">
           <button className="m-header__menu" onClick={() => setShowNav(!showNav)}>
             <img src="/images/menu.png" alt="" />
@@ -64,9 +64,9 @@ export default function Header() {
                 </div>
               )}
             </div>
-            <div className="nav__item">
+            <div className="nav__item" onMouseEnter={() => mouseEnterEvent(null)}>
               <Link href={'/price'}>
-                <a className="nav__link">가격 안내</a>
+                <a className="nav__link na">가격 안내</a>
               </Link>
             </div>
             <div className="nav__item" onMouseEnter={() => mouseEnterEvent(4)}>
@@ -101,11 +101,30 @@ export default function Header() {
 const HeaderLayout = styled.header`
   border-bottom: 1px solid #d7dadb;
   background: #fff;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 3000;
+  
+  &.hasdepth {
+    &:after {
+      content: '';
+      position: fixed;
+      left: 0;
+      top: 66px;
+      width: 100%;
+      height: 48px;
+      background:#fff;
+    }
+  }
+  
   .wrap {
     height: 65px;
     display: flex;
     align-items: center;
   }
+  
   .header__logo {
     margin-right: 125px;
     display: flex;
@@ -130,6 +149,8 @@ const HeaderLayout = styled.header`
     height: 100%;
     display: flex;
     align-items: center;
+    position: relative;
+    padding:0 4px;
     & ~ .nav__item {
       margin-left: 25px;
     }
@@ -143,6 +164,11 @@ const HeaderLayout = styled.header`
         left: 50%;
         bottom: 0;
         transform: translateX(-50%);
+      }
+      
+      & > a {
+        color:#4C73D5;
+        font-weight: 700;
       }
     }
     .nav__link {
@@ -158,12 +184,11 @@ const HeaderLayout = styled.header`
     justify-content: center;
     left: 0;
     top: 66px;
-    width: 100%;
     height: 48px;
-    background: #fff;
     a {
       font-size: 14px;
       color: #333;
+      white-space: nowrap;
       & ~ a {
         margin-left: 25px;
       }
@@ -186,19 +211,20 @@ const HeaderLayout = styled.header`
       line-height: 30px;
       padding: 0 15px;
       background: #fff;
+      transition: all .3s;
       &:first-child {
         &:hover {
-          background: #f3f3f3;
+          background: #F3F3F3;
         }
       }
       &:last-child {
         margin-left: 12px;
-        background: #3155ad;
+        background: #4679f6;
         color: #fff;
-        border: 1px solid #3155ad;
+        border: 1px solid #4679f6;
         &:hover {
-          background: #4e7def;
-          border: 1px solid #4e7def;
+          background: #90affa;
+          border: 1px solid #90affa;
         }
       }
     }

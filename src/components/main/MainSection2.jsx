@@ -8,7 +8,7 @@ export default function MainSection2() {
         <div className="wrap">
           <div className="txtBox">
             <h2>All in One Solution</h2>
-            <p>
+            <p className={'gray'}>
               전자서명을 보다 손쉽고 편리하게 많은 사람들이 다양한 분야에서
               <br />
               이용할 수 있게 하기위해 다양한 기술을 보유한 한글과컴퓨터가 한컴OK싸인을 만들었습니다.

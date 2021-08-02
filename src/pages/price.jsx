@@ -451,7 +451,7 @@ const Container = styled.div`
             border: 1px solid #111;
           }
           &.blue {
-            background: #4679f6;
+            background: #0090ff;
             color: #fff;
           }
           &.black {

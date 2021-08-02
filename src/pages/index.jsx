@@ -39,8 +39,12 @@ const Container = styled.div`
       p {
         font-size: 20px;
         line-height: 1.4em;
-        color: #999;
+        color: #333;
+        &.gray {
+          color:#888;
+        }
       }
+      
       @media screen and (max-width: 1024px) {
         h2 {
           font-size: 24px;
@@ -87,7 +91,6 @@ const Container = styled.div`
         }
       }
       @media screen and (max-width: 1200px) {
-        flex-direction: column;
         align-items: flex-start;
         .col {
           display: block;
@@ -102,6 +105,9 @@ const Container = styled.div`
             line-height: 1.3em;
           }
         }
+      }
+      @media screen and (max-width: 768px) {
+        display: block;
       }
     }
   }

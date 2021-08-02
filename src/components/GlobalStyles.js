@@ -7,10 +7,7 @@ const GlobalStyle = createGlobalStyle`
     body {
       font-size: 16px;
       line-height: 1.25em;
-      font-family: 'Noto Sans KR', system-ui, -apple-system, BlinkMacSystemFont,
-        'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif,
-        'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji',
-        'Sans-serif';
+      font-family: 'Noto Sans KR', sans-serif;
       font-weight: 400;
       letter-spacing: -.03em;
       margin: 0;

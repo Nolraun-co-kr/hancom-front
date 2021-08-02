@@ -27,6 +27,13 @@ const Container = styled.li`
   padding: 0 13px;
   width: 33.333%;
   margin-bottom: 20px;
+  @media screen and (max-width: 1200px) {
+    width: 50%;
+    padding: 0;
+  }
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
   .inner {
     border: 1px solid #ededed;
     &:hover {
@@ -35,11 +42,9 @@ const Container = styled.li`
     }
   }
   .img {
-    height: 240px;
-    border-bottom: 1px solid #ededed;
+    //border-bottom: 1px solid #ededed;
     img {
       width: 100%;
-      height: 100%;
     }
   }
   .txt {
@@ -81,7 +86,9 @@ const Container = styled.li`
       width: 100%;
     }
     .img {
-      height: 190px;
+      img {
+        vertical-align: top;
+      }
     }
     .txt {
       padding: 20px 15px;

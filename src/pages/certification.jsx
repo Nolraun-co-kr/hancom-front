@@ -10,8 +10,8 @@ export default function Certification() {
       <Container>
         <Visual
           type={'m-type1'}
-          title={'보안 & 법률정보'}
-          description={'공인된 법적 효력을 가진 전자계약 서비스 안심하고 사용하세요.'}
+          title={'본인 인증'}
+          description={'한컴OK싸인은 다양한 본인 인증 수단과 감사추적 인증서를 제공 합니다.'}
         />
 
         <div className="security__title">
