@@ -8,10 +8,9 @@ export default function Private() {
     <WrapperLayout>
       <Container>
         <div className="container sub private">
-          <Visual title={'전자금융거래 이용약관'} />
           <div className="private__content">
             <div className="wrap">
-              {/*<div className="private__tit">전자금융거래 이용약관</div>*/}
+              <div className="private__tit">전자금융거래 이용약관</div>
               <div className="private__txt">
 
                 <strong>제 1조 목적</strong>

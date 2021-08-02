@@ -116,6 +116,7 @@ const HeaderLayout = styled.header`
       width: 100%;
       height: 48px;
       background:#fff;
+      border-bottom: 1px solid #d7dadb;
     }
   }
   
