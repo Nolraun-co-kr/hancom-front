@@ -6,8 +6,8 @@ import axios from 'axios';
  * 리스트
  * */
 function getManyReferenceApi(params) {
-  const { category } = params;
-  return axios.get(`/api/dummy/reference?category=${category || 't1'}`);
+  const { category, page } = params;
+  return axios.get(`/api/dummy/reference?category=${category || 't1'}&page=${page}`);
 }
 
 function* getManyReference(action) {

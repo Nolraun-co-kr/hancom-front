@@ -1,30 +1,72 @@
 export default function handler(req, res) {
-  const { category } = req.query;
+  const { category, page } = req.query;
   let result = [];
   switch (category) {
     case 't1': {
-      result = [
-        {
-          id: '1',
-          title: '거래물건금전',
-          desc: '거래물건금전',
-        },
-        {
-          id: '2',
-          title: '거래물건금전',
-          desc: '거래물건금전',
-        },
-        {
-          id: '3',
-          title: '거래물건금전',
-          desc: '거래물건금전',
-        },
-        {
-          id: '41414',
-          title: '거래물건금전',
-          desc: '거래물건금전',
-        },
-      ];
+      if(page === '1') {
+        result = [
+          {
+            id: '1',
+            title: '거래물건금전',
+            desc: '거래물건금전',
+          },
+          {
+            id: '2',
+            title: '거래물건금전',
+            desc: '거래물건금전',
+          },
+          {
+            id: '3',
+            title: '거래물건금전',
+            desc: '거래물건금전',
+          },
+          {
+            id: '4',
+            title: '거래물건금전',
+            desc: '거래물건금전',
+          },
+          {
+            id: '5',
+            title: '거래물건금전',
+            desc: '거래물건금전',
+          },
+          {
+            id: '6',
+            title: '거래물건금전',
+            desc: '거래물건금전',
+          },
+        ];
+      }
+      else if(page === '2') {
+        result = [
+          {
+            id: '7',
+            title: '2페이지 타이틀',
+            desc: '2페이지 내용',
+          },
+          {
+            id: '8',
+            title: '2페이지 타이틀',
+            desc: '2페이지 내용',
+          },
+          {
+            id: '9',
+            title: '2페이지 타이틀',
+            desc: '2페이지 내용',
+          },
+          {
+            id: '10',
+            title: '2페이지 타이틀',
+            desc: '2페이지 내용',
+          },
+          {
+            id: '11',
+            title: '2페이지 타이틀',
+            desc: '2페이지 내용',
+          },
+        ];
+      }
+
       break;
     }
     case 't2': {

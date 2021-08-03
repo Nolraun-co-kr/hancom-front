@@ -8,13 +8,16 @@ import Visual from '../../components/common/Visual';
 export default function Reference() {
   const router = useRouter();
   const [tab, setTab] = useState('t1');
+
   const [title, setTitle] = useState('거래(물건/금전)');
   const handleClickTab = category => {
     router.push({
       pathname: '/reference',
-      query: { category },
+      query: { category, page: router.query?.page },
     }, null, { scroll: false });
+
     setTab(category);
+
     switch(category) {
       case 't1': {
         setTitle('거래 (물건/금전)');
@@ -131,7 +134,7 @@ export default function Reference() {
                   <h3>{title}</h3>
                   <p>한컴에서 제공하는 차별화된 제품들을 한컴OK싸인 기능으로 만나볼 수 있습니다.</p>
                 </div>
-                <ReferenceList category={tab || 't1'} />
+                <ReferenceList category={tab || 't1'} page={router.query?.page} />
               </div>
             </div>
           </div>

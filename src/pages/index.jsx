@@ -30,6 +30,8 @@ Index.getInitialProps = async () => {
 const Container = styled.div`
   .section {
     .txtBox {
+      position: relative;
+      z-index: 20;
       h2 {
         font-size: 40px;
         color: #333;

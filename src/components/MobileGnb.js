@@ -94,6 +94,32 @@ const MobileGnbLayout = styled.div`
       .wrap {
         display: flex;
       }
+      a {
+        font-size: 12px;
+        color: #999;
+        height: 30px;
+        border: 1px solid #bdbdbd;
+        border-radius: 5px;
+        line-height: 30px;
+        padding: 0 15px;
+        background: #fff;
+        transition: all .3s;
+        &:first-child {
+          &:hover {
+            background: #F3F3F3;
+          }
+        }
+        &:last-child {
+          margin-left: 12px;
+          background: #4679f6;
+          color: #fff;
+          border: 1px solid #4679f6;
+          &:hover {
+            background: #90affa;
+            border: 1px solid #90affa;
+          }
+        }
+      }
     }
   }
 

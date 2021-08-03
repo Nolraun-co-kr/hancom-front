@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getManyReferenceRequest } from '../../redux/actions/reference';
 import styled from 'styled-components';
 
-export default function ReferenceList({ category }) {
+export default function ReferenceList({ category, page }) {
   const router = useRouter();
   const dispatch = useDispatch();
   const { referenceList } = useSelector(state => state.reference);
@@ -16,9 +16,10 @@ export default function ReferenceList({ category }) {
     dispatch(
       getManyReferenceRequest({
         category: query?.category || category,
+        page: page || 1,
       }),
     );
-  }, [router, category]);
+  }, [router, category, page]);
 
   return (
     <>
@@ -27,7 +28,7 @@ export default function ReferenceList({ category }) {
           <ReferenceItem key={data.id} data={data} />
         ))}
       </Container>
-      <Pagination />
+      <Pagination entity={'reference'} category={category} page={page} />
     </>
   );
 }

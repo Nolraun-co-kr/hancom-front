@@ -1,6 +1,7 @@
 import * as types from '../../constants/referenceTypes';
 
 export const getManyReferenceRequest = params => {
+  console.log(params)
   return {
     type: types.GET_MANY_REFERENCE_REQUEST,
     params,
