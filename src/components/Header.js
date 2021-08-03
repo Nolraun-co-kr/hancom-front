@@ -153,7 +153,7 @@ const HeaderLayout = styled.header`
     position: relative;
     padding:0 4px;
     & ~ .nav__item {
-      margin-left: 25px;
+      margin-left: 48px;
     }
     &:hover {
       &::after {
@@ -177,6 +177,7 @@ const HeaderLayout = styled.header`
       color: #333;
     }
   }
+  
   .nav__depth {
     position: absolute;
     z-index: 5000;
@@ -191,7 +192,7 @@ const HeaderLayout = styled.header`
       color: #333;
       white-space: nowrap;
       & ~ a {
-        margin-left: 25px;
+        margin-left: 24px;
       }
       &:hover {
         border-bottom: 1px solid #333;

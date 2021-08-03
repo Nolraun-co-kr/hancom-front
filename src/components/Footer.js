@@ -11,10 +11,10 @@ export default function Footer() {
         <div className="footer__corp">
           <div className="corp__list">
             <Link href={'/private'} >
-              <a className={router.route === '/private' ? 'active' : ''}>이용약관</a>
+              <a>이용약관</a>
             </Link>
             <Link href={'/private'}>
-              <a>개인정보처리방침</a>
+              <a className={router.route === '/private' ? 'active' : ''}>개인정보처리방침</a>
             </Link>
             <Link href={'/private'}>
               <a>전자거래금융이용약관</a>

@@ -47,7 +47,8 @@ nav, output, ruby, section, summary, time, mark, audio, video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu,
@@ -84,6 +85,7 @@ a {
   text-decoration: none; }
 
 .header {
+
   border-bottom: 1px solid #D7DADB;
   background: #fff; }
   .header .wrap {
@@ -108,20 +110,22 @@ a {
     .header__nav {
       display: none; } }
 
-.nav__item {
-  height: 100%;
-  display: flex;
-  align-items: center;
-}
-.nav__item:hover {
-   border-bottom: 2px solid #4C73D5;
- }
-  .nav__item ~ .nav__item {
-    margin-left: 25px;
+  .nav__item {
+    height: 100%;
+    display: flex;
+    align-items: center;
   }
+  .nav__item:hover {
+     border-bottom: 2px solid #4C73D5;
+   }
+  .nav__item ~ .nav__item {
+    margin-left: 40px;
+  }
+
   .nav__item .nav__link {
     font-size: 16px;
-    color: #333; }
+    color: #333;
+  }
 
 /*.nav__item:hover .nav__depth{*/
 /*  display: flex;*/
@@ -384,7 +388,7 @@ a {
       .main .section1 .wrap {
         padding-top: 95px;
         padding-bottom: 0px;
-        
+
       }
       .main .section1 .txtBox {
         text-align: center;
